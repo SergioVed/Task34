@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Users/>
   },
   {
-    path: "/user/:name/:hobby/:age/:secondName",
+    path: "/user/:name/:hobby/:age",
     element: <UserPage/>
   }
 ])

@@ -4,19 +4,14 @@ import { useState } from "react"
 import "./styles.css"
 export const Users = () => {
     const [users, setUsers] = useState([
-        {name: "Sergio", secondName: "Vediankin", hobby: "Basket", age: 15},
-        {name: "Name", secondName: "secondName", hobby: "Hobby", age: 20}
+        {name: "Sergio", age: 15, hobby: "basketball"},
+        {name: "Vlad", age: 14, hobby: "cycling"}
     ])
     return(
         <div className="container"> 
-            <div className="usersTabl">
-                {users.map((user) => (
-                    <User user={user}/>
-                ))}
-            </div>
-            <Link to={"/"}>
-                Back
-            </Link>
+            {users.map((user) => (
+                <User name={user.name} age={user.age} hobby={user.hobby}/>
+            ))}
         </div>
     )
 }

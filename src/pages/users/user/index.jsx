@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom"
-export const User = ({user}) => {
-    const {name, age, secondName, hobby} = user
+export const User = ({name, age, hobby}) => {
     return(
         <div>
-            <Link to={`/user/${name}/${age}/${hobby}/${secondName}`}><p>{name}</p></Link>
-            <p>--------------------------------------------</p>
+            <Link to={`/user/:${name}/:${hobby}/:${age}`}><p>{name}</p></Link>
         </div>
     )
 }
