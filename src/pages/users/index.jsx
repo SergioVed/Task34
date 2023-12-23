@@ -11,7 +11,7 @@ export const Users = () => {
         <div className="container"> 
             <div className="usersTabl">
                 {users.map((user) => (
-                    <User name={user.name}/>
+                    <User user={user}/>
                 ))}
             </div>
             <Link to={"/"}>
